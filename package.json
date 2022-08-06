@@ -6,20 +6,37 @@
   "engines": {
     "vscode": "^1.70.0"
   },
+  "scripts": {
+    "transpile": "nodemon --watch ./syntaxes --exec \"node yaml-to-json\" --ext .yaml"
+  },
   "categories": [
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "hime",
-      "aliases": ["hime", "tsuki"],
-      "extensions": [".🌊💎🌧",".hime"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "hime",
-      "scopeName": "source.🌊💎🌧",
-      "path": "./syntaxes/🌊💎🌧.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "hime",
+        "aliases": [
+          "hime",
+          "tsuki"
+        ],
+        "extensions": [
+          ".🌊💎🌧",
+          ".hime"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "hime",
+        "scopeName": "source.🌊💎🌧",
+        "path": "./syntaxes/🌊💎🌧.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0",
+    "nodemon": "^2.0.19"
   }
 }
