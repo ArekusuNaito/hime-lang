@@ -1,0 +1,35 @@
+# luaDefinition: https://github.com/Microsoft/vscode/blob/20b497e68c0a43f0e294a9d1ee82bb5b78f8fadb/extensions/lua/syntaxes/lua.json
+# themeTokens: https://github.com/sumneko/lua-language-server/blob/master/theme-tokens.md
+# textMatesSyntaxes: https://github.com/microsoft/vscode/blob/main/extensions/lua/syntaxes/lua.tmLanguage.json
+
+version: 0.0.1
+name: hime-lua
+scopeName: source.🌊💎🌧
+patterns:
+  - include: "#expression"
+  - include: "#reserved"
+repository:
+  reserved:
+    match: function
+    name: keyword.control.lua
+  expression:
+    - patterns:
+      - include: "#letter"
+      - include: "#paren-expression"
+  letter:
+    match: a|b|c
+    name: keyword.letter
+  paren-expression:
+    name: expression.group
+    patterns:
+      - include: "#expression"
+    begin: "\\("
+    end: "\\)"
+    beginCaptures:
+      0:
+        name: punctuation.paren.open
+    endCaptures:
+      0:
+        name: punctuation.paren.close
+
+
