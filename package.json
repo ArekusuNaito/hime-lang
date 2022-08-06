@@ -1,0 +1,25 @@
+{
+  "name": "abc-language-id",
+  "displayName": "Hime",
+  "description": "月が綺麗ですね",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "hime",
+      "aliases": ["hime", "tsuki"],
+      "extensions": [".🌊💎🌧",".hime"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "hime",
+      "scopeName": "source.🌊💎🌧",
+      "path": "./syntaxes/🌊💎🌧.tmLanguage.json"
+    }]
+  }
+}
