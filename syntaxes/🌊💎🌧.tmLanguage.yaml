@@ -2,6 +2,8 @@
 # themeTokens: https://github.com/sumneko/lua-language-server/blob/master/theme-tokens.md
 # textMatesSyntaxes: https://github.com/microsoft/vscode/blob/main/extensions/lua/syntaxes/lua.tmLanguage.json
 
+# Hime Language configuration
+
 version: 0.0.1
 name: hime-lua
 scopeName: source.🌊💎🌧

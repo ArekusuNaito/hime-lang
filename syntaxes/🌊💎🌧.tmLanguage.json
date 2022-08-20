@@ -1,43 +1,55 @@
 {
-	"scopeName": "source.🌊💎🌧",
-	"name": "🌊💎🌧-lang",
-	"patterns": [{"include":"#expression"}],
-	"repository": 
-	{
-		"expression":
-		{
-			"patterns":
-			[
-				{
-					"include":"#letter"
-				},
-				{
-					"include":"#paren-expression"
-				}
-			]
-		},
-		"letter":
-		{
-			"match": "🌊|💎|🌧",
-			"name": "keyword.letter"
-		},
-		"paren-expression":
-		{
-			"name":"expression.group",
-			"patterns": [{"include":"#expression"}],
-			"begin": "\\(",
-			"end": "\\)",
-			"beginCaptures":
-			{
-				"0":
-				{
-					"name":"punctuation.paren.open"
-				}
-			},
-			"endCaptures":
-			{
-
-			}
-		}
-	}
+  "version": "0.0.1",
+  "name": "hime-lua",
+  "scopeName": "source.🌊💎🌧",
+  "patterns": [
+    {
+      "include": "#expression"
+    },
+    {
+      "include": "#reserved"
+    }
+  ],
+  "repository": {
+    "reserved": {
+      "match": "nada",
+      "name": "keyword.control.lua"
+    },
+    "expression": [
+      {
+        "patterns": [
+          {
+            "include": "#letter"
+          },
+          {
+            "include": "#paren-expression"
+          }
+        ]
+      }
+    ],
+    "letter": {
+      "match": "a|b|c",
+      "name": "keyword.letter"
+    },
+    "paren-expression": {
+      "name": "expression.group",
+      "patterns": [
+        {
+          "include": "#expression"
+        }
+      ],
+      "begin": "\\(",
+      "end": "\\)",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.paren.open"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.paren.close"
+        }
+      }
+    }
+  }
 }

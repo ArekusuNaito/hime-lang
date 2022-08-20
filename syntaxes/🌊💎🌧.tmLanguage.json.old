@@ -1,0 +1,43 @@
+{
+	"scopeName": "source.🌊💎🌧",
+	"name": "🌊💎🌧-lang",
+	"patterns": [{"include":"#expression"}],
+	"repository": 
+	{
+		"expression":
+		{
+			"patterns":
+			[
+				{
+					"include":"#letter"
+				},
+				{
+					"include":"#paren-expression"
+				}
+			]
+		},
+		"letter":
+		{
+			"match": "a|b|c|d|e",
+			"name": "keyword.letter"
+		},
+		"paren-expression":
+		{
+			"name":"expression.group",
+			"patterns": [{"include":"#expression"}],
+			"begin": "\\(",
+			"end": "\\)",
+			"beginCaptures":
+			{
+				"0":
+				{
+					"name":"punctuation.paren.open"
+				}
+			},
+			"endCaptures":
+			{
+
+			}
+		}
+	}
+}
